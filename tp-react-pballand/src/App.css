@@ -6,15 +6,25 @@
 }
 
 
-button{
-  font-size: 15px;
-  margin-left: 900px;
-  text-align: right;
+#buttons{
+  margin-top: 45px;
+  margin-left: 850px;
 
+
+}
+img{
+  width: 160px;
+  height: 150px;
+  border-radius: 60%;
+
+}
+button{
+  font-family: Algerian;
+  font-size: 25px;
 }
 #square{
   font-size: 15px;
-  margin-top: 300px;
+  margin-top: 250px;
   margin-left: 500px;
   margin-right: 500px;
   text-align: center;
