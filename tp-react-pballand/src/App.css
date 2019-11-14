@@ -24,9 +24,21 @@ button{
 }
 #square{
   font-size: 15px;
-  margin-top: 250px;
+  margin-top: 190px;
   margin-left: 500px;
   margin-right: 500px;
   text-align: center;
   border-style: groove;
+  background-color: #09d3ac;
+}
+#article{
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 80px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+  border-style: ridge;
+  background-color: aquamarine;
+
 }
