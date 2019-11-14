@@ -36,14 +36,26 @@ constructor(prenom,nom,date,pic){
         alert('Changement de profil');
         //window.location.reload();
     }
+    randomcolor(){
+        let r = Math.round((Math.random() * 100));
+        if(r>=75) {
+            document.body.style = 'background: red;';
+        }
+        if(r>50 && r<=74) {
+            document.body.style = 'background: blue;';
+        }
+        if(r<=50){
+            document.body.style = 'background: green;';
+        }
+    }
 
     render() {
 
 const nom=this.state.name;
 const prenom=this.state.frstname;
 const date=this.state.date;
-        const picture=this.state.picture;
-       // document.div.style = 'background: red;';
+const picture=this.state.picture;
+// document.div.style = 'background: red;';
         return (
 
                 <div id="glob">
@@ -59,6 +71,7 @@ const date=this.state.date;
 
                     <p> {prenom} </p>
                     <p>{date} </p>
+                        <button className="favorite styled"type="button" onClick={() => this.randomcolor()}>Change Style</button>
                     </div>
                         <div id='article'>
                             <p>{this.state.article}</p>
