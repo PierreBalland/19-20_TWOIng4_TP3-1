@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const globale="michael";
+const DEFAULT_STATE = { name: '', target: 5, units: '' }
+
 class Carreprincipale extends React.Component { //le carre principale a un prenom un nom date et photo a afficher
 constructor(prenom,nom,date,pic){
     super();
@@ -9,12 +12,15 @@ constructor(prenom,nom,date,pic){
     this.nom=nom;
     this.date=date;
     this.pic=pic;
+    this.state = { DEFAULT_STATE }
 }
+
     render() {
 
 const test =this.props.pic;
         return (
                 <div id="square">
+                    <button className="favorite styled"type="button" onClick={() => this.handleClick()}>Michael</button>
                     {this.props.pic}
                     <img className="fit-picture" src={test}/>
                     {this.props.prenom}
@@ -26,7 +32,10 @@ const test =this.props.pic;
             </div>
         );
     }
-
+    handleClick(){
+        this.setState(DEFAULT_STATE);
+        alert('Bien');
+    }
 }
 class Topbuttons extends React.Component { //le carre principale a un prenom un nom date et photo a afficher
     constructor(){
@@ -37,33 +46,27 @@ class Topbuttons extends React.Component { //le carre principale a un prenom un 
 
         return (
             <div>
-                <button className="favorite styled"
-                        type="button">
-                    Add to favorites
-                </button>
 
+                <button className="favorite styled"type="button">Dwight</button>
+                <button className="favorite styled"type="button">Angela</button>
 
             </div>
         );
     }
 
 }
-class Personne  { //le carre principale a un prenom un nom date et photo
-    constructor(prenom,nom,date,pic){
 
-        this.prenom=prenom;
-        this.nom=nom;
-        this.date=date;
-        this.pic=pic;
-    }
-
-
+function f() {
+    globale="andre";
+    window.location.reload();
 }
+
 class Page extends React.Component {
     render() {
         return (
             <div>
             <Topbuttons/>
+                {globale}
             <Carreprincipale prenom={"Michael"} nom={"Scott"} date={"07/11/65"} pic={"michael.jpg"}/>
             </div>
         );
